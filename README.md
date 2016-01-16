@@ -3,6 +3,7 @@ Pretty print in json-format from stdin to stdout
 
 ```
 #!/usr/bin/python
+# pprint-json.py
 
 import json
 import sys
@@ -25,4 +26,8 @@ s = sys.stdin.read().strip()
 data = json.loads(s)
 # pprint.pprint(data)
 MyPrettyPrinter().pprint(data)
+```
+
+```
+% curl -X "GET" http://127.0.0.1:5000/items/ | ./pprint-json.py
 ```
